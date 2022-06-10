@@ -1,0 +1,266 @@
+/*
+   Reset!
+
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* End Reset. */
+
+
+/* Define variables */
+:root {
+	--main-bg-color: #000;
+	--main-font-color: #fff;
+	--main-link-color: #fff;
+	--accent-color: #fff;
+	--profile-pic: 'brackish-full.png';
+}
+
+
+@font-face {
+    font-family: 'engraving_ccbold';
+    src: url('engravingcc-webfont.woff2') format('woff2'),
+         url('engravingcc-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* The rest */
+body {
+	color: var(--main-font-color);
+	background-color: var(--main-bg-color);
+	font-family: 'Anton', serif;
+}
+#header {
+	padding: 30px 0 30px 0;
+	background: transparent url('brackish-transparent.png');
+	font-family: 'engraving_ccbold', sans-serif;
+}
+#header a {
+	display: block;
+	width: 100%;
+	/**height: 126px;**/
+	/*background: transparent url('brackish-full.png') -10px 0 no-repeat;*/
+}
+#header a span {
+	display: none;
+}
+
+.portrait {
+	width: 100%;
+	height: 650px;
+	background: transparent url('sunrise-poc.jpg') 0 0 no-repeat;
+	padding: none;
+	margin-bottom: 1em;
+}
+
+hr {
+	color: var(--accent-color);
+	border-bottom: 4px solid var(--accent-color);
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 1.0em;
+	font-family: 'engraving_ccbold', sans-serif;
+	cursor: default;
+	/*margin: 1.46em 0 1.5em 0;*/
+	padding: 0 0 0.5em 0;
+	border-bottom: 4px solid var(--accent-color);
+}
+
+h3 {
+	font: 1.33em/1.0em 'Anton', sans-serif;
+	color: var(--main-font-color);
+	border-bottom: 1px solid var(--accent-color);
+	padding-bottom: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+p {
+	margin-bottom: 1.5em;
+	line-height: 1.5em;
+	font-size: 16px;
+}
+.bodycopy {
+	padding-top: 1.5em;
+	text-align: justify;
+}
+
+.bodycopy p {
+	width: 90%;
+}
+
+.contact  {
+	padding-top: 1.5em;
+	text-align: justify;
+}
+
+a {
+	text-decoration: underline;
+	color: var(--main-link-color);
+}
+
+a:visited {
+	color: var(--main-link-color);
+}
+a:hover {}
+a:active, a:focus {}
+
+strong {
+	font-weight: bold;
+}
+em {
+	color: #933;
+	font-style: italic;
+}
+
+ul {
+
+}
+
+li {
+	padding: 0.5em;
+}
+#title {
+	color: var(--main-font-color);
+	text-decoration: none;
+}
+
+#title a {
+	text-decoration: underline;
+}
+
+.social {
+	width: 40px;
+}
+
+.photonote {
+	text-align: right;
+	font-size: 0.7em;
+	font-style: italic;
+	color: var(--main-link-color);
+	line-height: 1.0em;
+	margin-top: 0.5em;
+	cursor: default;
+}
+.tiny {
+	font: 0.75em/1.0em Helvetica, Arial, sans-serif;
+}
+.fingerprint {}
+.fingerprint span {
+	margin-right: 6px;
+	font-size: 0.85em;
+	font-family: Consolas, Monaco, "Courier New", monospace;
+}
+.fingerprint span:nth-child(even) {
+	font-weight: bold;
+}
+
+.footer {
+	border-top: 4px solid var(--accent-color);
+	margin-top: 1.0em;
+}
+.footer p {
+	text-align: right;
+	font-size: 0.9em;
+	margin: 0.5em 0 5.0em 0;
+}
+
+/* dppx: Dots per pixel. 96dpi = 1dppx */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 1.5dppx) { 
+    #header a {
+		background-image: url(var(--profile-pic));
+		background-size: 940px 126px;
+	}
+	.portrait {
+		background: url(var(--profile-pic));
+		background-size: 940px 650px;
+	}
+}
+
+@media (max-width: 960px) {
+	body {
+		min-width: auto;
+		width: auto;
+	}
+
+
+	.container_12, 
+	.container_12 .grid_12, 
+	.container_12 .grid_8, 
+	.container_12 .grid_4 {
+		width: auto;
+		float: none;
+		clear: both;
+		display: block;
+	}
+	/*.bodycopy {
+		width: calc(100%-300px);
+	}
+	.info {
+		width: 300px;
+	}*/
+	#header {
+		width: 100%;
+		height: 0;
+		padding-bottom: 13.4%;
+		margin-bottom: 3.191%;
+	}
+	#header a {
+		width: 100%;
+		background-size: 100%;
+		background-position: 0 0;
+	}
+	.portrait {
+		width: 100%;
+		height: 0;
+		padding-bottom: 66.7%;
+		background-size: 100%;
+	}
+}
